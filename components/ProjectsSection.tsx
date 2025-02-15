@@ -27,7 +27,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
-            <Card className="overflow-hidden bg-zinc-900/50 border-zinc-800 hover:border-purple-500 transition-all duration-300 backdrop-blur-sm">
+            <Card className="overflow-hidden bg-zinc-900/50 border-zinc-800 hover:border-purple-500 transition-all duration-300 backdrop-blur-sm" onClick={() => window.open(project.link, "_blank")}>
               <div className="relative h-48 mb-2">
                 <Image src={project.image || "/placeholder.svg"} alt={project.title}  width={500}
   height={500} className="object-cover" />
